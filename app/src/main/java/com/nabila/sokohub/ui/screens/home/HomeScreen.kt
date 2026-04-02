@@ -2,6 +2,7 @@ package com.nabila.sokohub.ui.screens.home
 
 import android.graphics.Color
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -117,7 +119,12 @@ fun HomeScreen(){
 
         //Row
 
-        Row() {
+        Row(
+            modifier = Modifier.horizontalScroll(rememberScrollState())
+        ) {
+
+            Spacer(modifier = Modifier.width(20.dp))
+
             Column() {
                 Image(
                     painter = painterResource(R.drawable.grocery),
@@ -148,6 +155,140 @@ fun HomeScreen(){
                 
 
             }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Column() {
+                Image(
+                    painter = painterResource(R.drawable.grocery),
+                    contentDescription = "grocery",
+                    modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
+                    contentScale = ContentScale.Crop
+
+                )
+
+                Text(
+                    text = "Groceries",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(start = 20.dp)
+                )
+
+                Button(
+                    onClick = { },
+                    colors = ButtonDefaults.buttonColors(newpurple),
+                    shape = RoundedCornerShape(10.dp),
+                    modifier = Modifier.padding(start = 20.dp),
+
+                    ) {
+                    Text(text = "Shop Now")
+
+                }
+
+
+
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Column() {
+                Image(
+                    painter = painterResource(R.drawable.grocery),
+                    contentDescription = "grocery",
+                    modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
+                    contentScale = ContentScale.Crop
+
+                )
+
+                Text(
+                    text = "Groceries",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(start = 20.dp)
+                )
+
+                Button(
+                    onClick = { },
+                    colors = ButtonDefaults.buttonColors(newpurple),
+                    shape = RoundedCornerShape(10.dp),
+                    modifier = Modifier.padding(start = 20.dp),
+
+                    ) {
+                    Text(text = "Shop Now")
+
+                }
+
+
+
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Column() {
+                Image(
+                    painter = painterResource(R.drawable.grocery),
+                    contentDescription = "grocery",
+                    modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
+                    contentScale = ContentScale.Crop
+
+                )
+
+                Text(
+                    text = "Groceries",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(start = 20.dp)
+                )
+
+                Button(
+                    onClick = { },
+                    colors = ButtonDefaults.buttonColors(newpurple),
+                    shape = RoundedCornerShape(10.dp),
+                    modifier = Modifier.padding(start = 20.dp),
+
+                    ) {
+                    Text(text = "Shop Now")
+
+                }
+
+
+
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Column() {
+                Image(
+                    painter = painterResource(R.drawable.grocery),
+                    contentDescription = "grocery",
+                    modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
+                    contentScale = ContentScale.Crop
+
+                )
+
+                Text(
+                    text = "Groceries",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(start = 20.dp)
+                )
+
+                Button(
+                    onClick = { },
+                    colors = ButtonDefaults.buttonColors(newpurple),
+                    shape = RoundedCornerShape(10.dp),
+                    modifier = Modifier.padding(start = 20.dp),
+
+                    ) {
+                    Text(text = "Shop Now")
+
+                }
+
+
+
+            }
+
+
 
 
 
