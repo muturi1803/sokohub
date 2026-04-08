@@ -23,11 +23,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.nabila.sokohub.R
+import com.nabila.sokohub.navigation.ROUT_HOME
 import com.nabila.sokohub.ui.theme.newpurple
 
 @Composable
-fun OnBoardingScreen(){
+fun OnBoardingScreen( navController: NavController){
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -72,7 +75,7 @@ fun OnBoardingScreen(){
         )
 
         Button(
-            onClick = { },
+            onClick = { navController.navigate(ROUT_HOME)},
             colors = ButtonDefaults.buttonColors(newpurple),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)
@@ -112,5 +115,5 @@ fun OnBoardingScreen(){
 @Composable
 fun OnBoardingScreenPreview(){
 
-    OnBoardingScreen()
+    OnBoardingScreen(rememberNavController())
 }
