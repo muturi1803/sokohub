@@ -21,6 +21,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -42,14 +43,18 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.nabila.sokohub.R
+import com.nabila.sokohub.navigation.ROUT_REGISTER
 import com.nabila.sokohub.ui.theme.newpurple
 
 @Composable
-fun LoginScreen(navController: NavController){
+fun LoginScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .paint(painter = painterResource(R.drawable.ic_launcher_background), contentScale = ContentScale.FillBounds),
+            .paint(
+                painter = painterResource(R.drawable.ic_launcher_background),
+                contentScale = ContentScale.FillBounds
+            ),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
@@ -76,7 +81,7 @@ fun LoginScreen(navController: NavController){
         //Email
         OutlinedTextField(
             value = email,
-            onValueChange = {email = it},
+            onValueChange = { email = it },
             modifier = Modifier.width(350.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "") },
             label = { Text("Email Address") },
@@ -94,7 +99,7 @@ fun LoginScreen(navController: NavController){
         //Password
         OutlinedTextField(
             value = password,
-            onValueChange = {password = it},
+            onValueChange = { password = it },
             modifier = Modifier.width(350.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "") },
             label = { Text("Password") },
@@ -124,30 +129,34 @@ fun LoginScreen(navController: NavController){
         }
 
         Spacer(modifier = Modifier.height(10.dp))
-        Text(
-            text = "Don't have an Account? Register",
-            fontWeight = FontWeight.Medium,
-        )
 
 
+        TextButton(onClick = { navController.navigate(ROUT_REGISTER) }) {
+
+            Text(
+                text = "Don't have an Account? Register",
+                fontSize = 15.sp
+            )
 
 
+        }
+
+        TextButton(onClick = { navController.navigate(ROUT_REGISTER) }) {
+
+            Text(
+                text = "Don't have an Account? Register",
+                fontSize = 15.sp
 
 
+            )
 
 
-
-
-
-
-
-
-
-
+        }
+    }
+    @Preview(showBackground = true)
+    @Composable
+    fun LoginScreenPreview() {
+        LoginScreen(rememberNavController())
     }
 }
-@Preview(showBackground = true)
-@Composable
-fun LoginScreenPreview(){
-    LoginScreen(rememberNavController())
-}
+

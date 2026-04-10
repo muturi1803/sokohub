@@ -27,6 +27,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.nabila.sokohub.R
 import com.nabila.sokohub.navigation.ROUT_HOME
+import com.nabila.sokohub.navigation.ROUT_REGISTER
 import com.nabila.sokohub.ui.theme.newpurple
 
 @Composable
@@ -75,7 +76,7 @@ fun OnBoardingScreen( navController: NavController){
         )
 
         Button(
-            onClick = { navController.navigate(ROUT_HOME)},
+            onClick = { navController.navigate(ROUT_REGISTER)},
             colors = ButtonDefaults.buttonColors(newpurple),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)

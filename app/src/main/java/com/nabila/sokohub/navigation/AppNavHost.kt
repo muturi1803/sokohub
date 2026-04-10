@@ -10,6 +10,7 @@ import com.nabila.sokohub.ui.screens.about.AboutScreen
 import com.nabila.sokohub.ui.screens.auth.LoginScreen
 import com.nabila.sokohub.ui.screens.auth.RegisterScreen
 import com.nabila.sokohub.ui.screens.home.HomeScreen
+import com.nabila.sokohub.ui.screens.intent.IntentScreen
 import com.nabila.sokohub.ui.screens.onboarding.OnBoardingScreen
 import com.nabila.sokohub.ui.screens.service.ServiceScreen
 
@@ -46,6 +47,10 @@ fun AppNavHost(
 
         composable(ROUT_SERVICE) {
             ServiceScreen(navController)
+        }
+
+        composable(ROUT_INTENT) {
+            IntentScreen(navController)
         }
 
     }
